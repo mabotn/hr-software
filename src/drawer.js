@@ -16,6 +16,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import { Link } from 'react-router-dom';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import { ListItemText } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -139,11 +140,11 @@ export default function MiniDrawer({ userRoutes }) {
                 </div>
                 <Divider />
                 <List>
-                    <ListItem button key='employees'>
+                    <ListItem button key='employees' >
                         <Link to={'/employees'}>
                             <ListItemIcon><PeopleAltIcon /></ListItemIcon>
-                            {/* <ListItemText primary='employees' /> */}
                         </Link>
+                        <ListItemText primary='employees' />
                     </ListItem>
                 </List>
                 <Divider />
