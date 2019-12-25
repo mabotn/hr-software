@@ -47,12 +47,12 @@ export default function Employee() {
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <div className='intro'>
-                            <span>List of all the employees at your company. You can also view terminated employees.</span>
+                            <span>List of all the employees at your company.</span>
                         </div>
                         <br></br>
                         <div className='number_employees'>
-                            <PeopleOutlineIcon className='icon' /><br></br>
-                            <span> Number of Employees : {users.length}</span>
+                            <PeopleOutlineIcon style={{ fontSize: 70 }} color="primary" className='icon' /><br></br>
+                            <span > Number of Employees : <strong>{users.length}</strong></span>
                         </div>
                     </Paper>
                 </Grid>
