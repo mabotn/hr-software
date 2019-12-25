@@ -19,7 +19,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { ListItemText } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
 const drawerWidth = 240;
 
@@ -157,7 +157,7 @@ export default function MiniDrawer({ userRoutes }) {
                     </ListItem>
                     <ListItem button key='planning' >
                         <Link to={'/planning'}>
-                            <ListItemIcon><PeopleAltIcon /></ListItemIcon>
+                            <ListItemIcon><ScheduleIcon /></ListItemIcon>
                         </Link>
                         <ListItemText primary='Planning' />
                     </ListItem>
