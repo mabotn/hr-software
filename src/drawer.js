@@ -147,25 +147,33 @@ export default function MiniDrawer({ userRoutes }) {
                         <Link to={'/dashboard'}>
                             <ListItemIcon><DashboardIcon /></ListItemIcon>
                         </Link>
-                        <ListItemText primary='Dashboard' />
+                        <Link to={'/dashboard'}>
+                            <ListItemText primary='Dashboard' />
+                        </Link>
                     </ListItem>
                     <ListItem button key='employees' >
                         <Link to={'/employees'}>
                             <ListItemIcon><PeopleAltIcon /></ListItemIcon>
                         </Link>
-                        <ListItemText primary='Employees' />
+                        <Link to={'/employees'}>
+                            <ListItemText primary='Employees' />
+                        </Link>
                     </ListItem>
                     <ListItem button key='planning' >
                         <Link to={'/planning'}>
                             <ListItemIcon><ScheduleIcon /></ListItemIcon>
                         </Link>
-                        <ListItemText primary='Planning' />
+                        <Link to={'/planning'}>
+                            <ListItemText primary='Planning' />
+                        </Link>
                     </ListItem>
                     <ListItem button key='logout' >
                         <Link to={'/logout'}>
                             <ListItemIcon><ExitToAppIcon /></ListItemIcon>
                         </Link>
-                        <ListItemText primary='Logout' />
+                        <Link to={'/logout'}>
+                            <ListItemText primary='Logout' />
+                        </Link>
                     </ListItem>
                 </List>
                 <Divider />
