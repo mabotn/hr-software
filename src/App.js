@@ -12,6 +12,10 @@ function App() {
         <Route exact path="/employees">
           <LazyEmployee />
         </Route>
+        <Route exact path="/dashboard">
+        </Route>
+        <Route exact path="/logout">
+        </Route>
       </Switch>
     </>
   const isAuthenticated = true;
