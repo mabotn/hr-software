@@ -16,6 +16,8 @@ function App() {
         </Route>
         <Route exact path="/logout">
         </Route>
+        <Route exact path="/planning">
+        </Route>
       </Switch>
     </>
   const isAuthenticated = true;
