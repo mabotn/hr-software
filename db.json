@@ -1,25 +1,52 @@
 {
-    "events": [
-        {
-            "title": "React Training",
-            "description": "4 days training",
-            "kind": "SeveralDays",
-            "startDate": "2019-12-23",
-            "endDate": "2019-12-26",
-            "type": "event",
-            "isApproved": true,
-            "created_by": "1577196407012"
-        }
-    ],
-    "users": [
-        {
-            "id": "1577196407012",
-            "firstname": "John",
-            "lastname": "Doe",
-            "email": "john@doe.com",
-            "password": "12345678",
-            "type": "admin",
-            "supervisor": 0
-        }
-    ]
+  "events": [
+    {
+      "title": "React Training",
+      "description": "4 days training",
+      "kind": "SeveralDays",
+      "startDate": "2019-12-23",
+      "endDate": "2019-12-26",
+      "type": "event",
+      "isApproved": true,
+      "created_by": "1577196407012"
+    }
+  ],
+  "users": [
+    {
+      "id": "1577196407012",
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john@doe.com",
+      "password": "12345678",
+      "type": "admin",
+      "supervisor": 0
+    },
+    {
+      "id": "157719640702",
+      "firstname": "John",
+      "lastname": "Cena",
+      "email": "john@Cena.com",
+      "password": "12345678",
+      "type": "admin",
+      "supervisor": 1
+    },
+    {
+      "id": "15776407012",
+      "firstname": "John",
+      "lastname": "Don",
+      "email": "john@Don.com",
+      "password": "12345678",
+      "type": "admin",
+      "supervisor": 1
+    },
+    {
+      "id": "15771964012",
+      "firstname": "John",
+      "lastname": "Wa",
+      "email": "john@wall.com",
+      "password": "12345678",
+      "type": "admin",
+      "supervisor": 0
+    }
+  ]
 }
