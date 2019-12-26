@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import { useEffect } from 'react';
-import Axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import MaterialTable from 'material-table';
 import UsersServices from '../../services/users';
-
+import { useSelector, useDispatch } from 'react-redux';
+import usersActions from '../../actions/users'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,25 +20,23 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Employee() {
+let Employee = () => {
+    const users = useSelector(state => state.users)
+    const dispatch = useDispatch()
     const classes = useStyles();
-    const [users, setUsers] = useState([]);
     const [columns] = React.useState([
         { title: 'Firstname', field: 'firstname' },
         { title: 'Lastname', field: 'lastname' },
         { title: 'Email', field: 'email' },
         { title: 'Password', field: 'password', },
         { title: 'Type', field: 'type', },
-        { title: 'Supervisor', field: 'supervisor', type: 'boolean' },
+        { title: 'Supervisor', field: 'supervisor' },
     ]);
     useEffect(() => {
-        Axios.get('http://localhost:3000/users')
-            .then((res) => {
-                setUsers(res.data)
-            })
-            .catch(
-                (err) => { console.error(err) }
-            )
+        UsersServices.getAllUsers((data) => {
+            console.log(data)
+            dispatch(usersActions.FILL_USERS(data))
+        })
     }, [])
 
     return (
@@ -65,24 +63,18 @@ export default function Employee() {
                             editable={{
                                 onRowAdd: (newData) =>
                                     new Promise(resolve => {
-                                        setTimeout(() => {
-                                            resolve();
-                                            UsersServices.addUser(newData)
-                                        }, 600);
+                                        resolve();
+                                        dispatch(usersActions.ADD_USER(newData))
                                     }),
-                                onRowUpdate: (newData, oldData) =>
+                                onRowUpdate: (newData) =>
                                     new Promise(resolve => {
-                                        setTimeout(() => {
-                                            resolve();
-                                            UsersServices.editUser(oldData.id, newData)
-                                        }, 600);
+                                        resolve();
+                                        dispatch(usersActions.EDIT_USER(newData))
                                     }),
                                 onRowDelete: (oldData) =>
                                     new Promise(resolve => {
-                                        setTimeout(() => {
-                                            resolve();
-                                            UsersServices.deleteUser(oldData.id)
-                                        }, 600);
+                                        resolve();
+                                        dispatch(usersActions.DELETE_USER(oldData))
                                     }),
                             }}
                         />
@@ -92,3 +84,5 @@ export default function Employee() {
         </div >
     );
 }
+
+export default Employee;

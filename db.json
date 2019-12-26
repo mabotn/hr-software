@@ -13,40 +13,40 @@
   ],
   "users": [
     {
-      "id": "1577196407012",
-      "firstname": "John",
-      "lastname": "Doe",
-      "email": "john@doe.com",
-      "password": "12345678",
-      "type": "admin",
-      "supervisor": 0
-    },
-    {
       "id": "157719640702",
       "firstname": "John",
       "lastname": "Cena",
       "email": "john@Cena.com",
       "password": "12345678",
       "type": "admin",
-      "supervisor": 1
+      "supervisor": 1,
+      "tableData": {
+        "id": 0
+      }
     },
     {
-      "id": "15776407012",
-      "firstname": "John",
-      "lastname": "Don",
-      "email": "john@Don.com",
-      "password": "12345678",
-      "type": "admin",
-      "supervisor": 1
+      "firstname": "Hamza",
+      "lastname": "Jawher",
+      "email": "jawher_hamza@yahoo.fr",
+      "password": "AZ",
+      "type": "AZ",
+      "supervisor": "AZ",
+      "tableData": {
+        "id": 1
+      },
+      "id": "IdMEZJF"
     },
     {
-      "id": "15771964012",
-      "firstname": "John",
-      "lastname": "Wa",
-      "email": "john@wall.com",
-      "password": "12345678",
-      "type": "admin",
-      "supervisor": 0
+      "firstname": "AZER",
+      "lastname": "AZER",
+      "email": "AZER",
+      "password": "AZER",
+      "type": "AEZR",
+      "supervisor": "AZER",
+      "tableData": {
+        "id": 2
+      },
+      "id": "QguMPDu"
     }
   ]
 }
